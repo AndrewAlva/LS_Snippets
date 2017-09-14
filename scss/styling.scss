@@ -1,5 +1,16 @@
 @import 'mixins';
 
+#tester{
+	position: absolute;
+	width: 175px;
+	height: 12px;
+	@include boxSizer();
+	border: 1px solid red;
+	z-index: 999;
+	top: 627px;
+	left: 626px;
+}
+
 // MANDELBROT Boilerplate style
 	
 	// Variables
@@ -17,72 +28,165 @@
 
 		.innerWrap{
 			position: absolute;
-			width: 90%; // Fall back
-			width: calc(100% - 20px);
-			height: 90%; // Fall back
-			height: calc(100% - 20px);
+			width: 100%;
+			height: 100%;
+			@include boxSizer();
 			margin: auto;
 			top: 0; bottom: 0; left: 0; right: 0;
 			overflow: scroll;
+			border: 20px solid #fff;
 			background-color: $mbrtLightGray;
 
-			header{
-				position: fixed;
-				width: 50%;
-				height: $mainHeight;
-				right: 10px;
-				border: 1px solid $mbrtDarkGray;
-				
-				li{
-					@include displayLeft();
-					width: 20%;
-
-				}
-	
-			}
 
 			section{
 				position: relative;
-				width: 100%;
-				top: ($mainHeight * 2);
+				margin-bottom: ($mainHeight);
+				// border: 1px solid $mbrtDarkGray;
+				@include boxSizer();
 			}
 
-			footer{
-				position: fixed;
-				width: 200px;
-				height: $mainHeight;
-				left: 10px;
-				bottom: 10px;
-				border: 1px solid $mbrtDarkGray;
-
-				li{
-					@include displayLeft();
-					width: 25%;
-					text-transform: uppercase;
-				}
-			}
 
 			.mbrtBttns{
 				line-height: $mainHeight;
 			}
 
-			a{
-				display: block;
-				text-align: center;
-				text-decoration: none;
-				color: $mbrtLightGray;
-				font-weight: lighter;
-				background-color: $mbrtDarkGray;
+		}
+	}
 
-				@include transitions(all, 0.3s, ease-in-out);
+	////////// Snippets
+	#snippet1{
+		width: 900px;
+		overflow: hidden;
+		background-color: #fff;
+		padding: 105px 57px 57px 57px;
+		@include boxSizer();
 
-				&:hover{
-					color: $mbrtDarkGray;
-					background-color: $mbrtLightGray;
-					@include opacity(0.5);
+		.innerSnippet{
+			width: 100%;
+			height: 100%;
+
+			h4,h5,p{
+				margin: 0;
+			}
+
+			.innerColumns{
+				@include displayLeft();
+			}
+
+			.leftColumn{
+				width: 140px;
+
+				.iconContainer{
+					position: relative;
+					width: 100%;
+					border-radius: 50%;
+					overflow: hidden;
+					background-color: #f6f6f6;
+
+					img{
+						width: 100%;
+					}
+				}
+			}
+
+			.rightColumn{
+				width: 640px;
+				height: 100%;
+				@include boxSizer();
+				padding: 18px 0px 0px 59px;
+
+				.und-color{
+					background-color: #ffc554;
+				}
+				.dec-color{
+					background-color: #ff777d;
+				}
+				.tak-color{
+					background-color: #6cbfff;
+				}
+
+				.colorbar{
+					position: relative;
+					width: 81px;
+					height: 6px;
+					margin-bottom: 25px;
+				}
+
+				.bigTitle{
+					font-size: 46px;
+					text-transform: uppercase;
+					font-family: 'Roboto', serif;
+					font-weight: inherit;
+					line-height: 33px;
+					margin-bottom: 17px;
+				}
+
+				.smallTitle{
+					font-size: 16px;
+					font-family: 'Playfair Display', serif;
+					line-height: 12px;
+					margin-bottom: 36px;
+				}
+
+				.divbar{
+					position: relative;
+					width: 81px;
+					height: 1pt;
+					margin-bottom: 34px;
+					background-color: #000;
+				}
+
+				.conceptBlock{
+					width: 470px;
+					font-family: 'Roboto', sans-serif;
+					font-size: 16px;
+					letter-spacing: 0.4px;
+					line-height: 19px;
+					margin-bottom: 60px;
+				}
+
+				.goToArticle{
+					position: absolute;
+					width: 320px;
+					height: 12px;
+					line-height: 12px;
+					font-size: 12px;
+					bottom: 0;
+					right: 0;
+					text-decoration: none;
+					color: #000;
+					@include transitions(transform, 0.5s, ease-in-out);
+
+					&:hover{
+						@include translate(15px, 0);
+					}
+
+					.text{
+						float: right;
+						text-transform: uppercase;
+						letter-spacing: 1.2px;
+						font-family: 'Roboto', sans-serif;
+						margin-right: 22px;
+					}
+
+					.arrowHome{
+						float: right;
+						margin-top: 2.5px;
+					}
 				}
 			}
 		}
 	}
 
+	.card-hover{
+		@include transitions(box-shadow, 0.4s, ease-in-out);
+
+		&:hover{
+			@include drawShadow();
+		}
+	}
+
 // END MANDELBROT style
+
+
+@import 'responsive'

@@ -3,8 +3,8 @@
 	float: left;
 	display: inline-block;
 	vertical-align: top;
-	zoom: 1; /* Fix for IE7 */
-	*display: inline; /* Fix for IE7 */
+	zoom: 1;
+	*display: inline;
 }
 
 @mixin transitions($class, $timing, $ease){
@@ -20,4 +20,32 @@
 	filter: alpha(opacity=($val * 100));
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(($val * 100))';
+}
+
+@mixin boxSizer(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin lightFont(){
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+@mixin translate($xMove, $yMove){
+    -webkit-transform: translate($xMove, $yMove);
+    -moz-transform: translate($xMove, $yMove);
+	-ms-transform: translate($xMove, $yMove);
+    -o-transform: translate($xMove, $yMove);
+    transform: translate($xMove, $yMove);
+}
+
+@mixin drawShadow(){
+	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.15);
+	box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.15);
 }
