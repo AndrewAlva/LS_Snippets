@@ -41,7 +41,19 @@
     #mbrtWrap .innerWrap .mbrtBttns {
       line-height: 50px; }
 
-#snippet1 {
+.divisionTitles {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 22px;
+  border-bottom: 2px solid #000; }
+  .divisionTitles h5 {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; }
+
+.description-card-snippet {
   width: 900px;
   overflow: hidden;
   background-color: #fff;
@@ -49,72 +61,72 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  #snippet1 .innerSnippet {
+  .description-card-snippet .innerSnippet {
     width: 100%;
     height: 100%; }
-    #snippet1 .innerSnippet h4, #snippet1 .innerSnippet h5, #snippet1 .innerSnippet p {
+    .description-card-snippet .innerSnippet h4, .description-card-snippet .innerSnippet h5, .description-card-snippet .innerSnippet p {
       margin: 0; }
-    #snippet1 .innerSnippet .innerColumns {
+    .description-card-snippet .innerSnippet .innerColumns {
       position: relative;
       float: left;
       display: inline-block;
       vertical-align: top;
       zoom: 1;
       *display: inline; }
-    #snippet1 .innerSnippet .leftColumn {
+    .description-card-snippet .innerSnippet .leftColumn {
       width: 140px; }
-      #snippet1 .innerSnippet .leftColumn .iconContainer {
+      .description-card-snippet .innerSnippet .leftColumn .iconContainer {
         position: relative;
         width: 100%;
         border-radius: 50%;
         overflow: hidden;
         background-color: #f6f6f6; }
-        #snippet1 .innerSnippet .leftColumn .iconContainer img {
+        .description-card-snippet .innerSnippet .leftColumn .iconContainer img {
           width: 100%; }
-    #snippet1 .innerSnippet .rightColumn {
+    .description-card-snippet .innerSnippet .rightColumn {
       width: 640px;
       height: 100%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       padding: 18px 0px 0px 59px; }
-      #snippet1 .innerSnippet .rightColumn .und-color {
+      .description-card-snippet .innerSnippet .rightColumn .und-color {
         background-color: #ffc554; }
-      #snippet1 .innerSnippet .rightColumn .dec-color {
+      .description-card-snippet .innerSnippet .rightColumn .dec-color {
         background-color: #ff777d; }
-      #snippet1 .innerSnippet .rightColumn .tak-color {
+      .description-card-snippet .innerSnippet .rightColumn .tak-color {
         background-color: #6cbfff; }
-      #snippet1 .innerSnippet .rightColumn .colorbar {
+      .description-card-snippet .innerSnippet .rightColumn .colorbar {
         position: relative;
         width: 81px;
         height: 6px;
         margin-bottom: 25px; }
-      #snippet1 .innerSnippet .rightColumn .bigTitle {
+      .description-card-snippet .innerSnippet .rightColumn .bigTitle {
         font-size: 46px;
         text-transform: uppercase;
         font-family: 'Roboto', serif;
         font-weight: inherit;
         line-height: 33px;
         margin-bottom: 17px; }
-      #snippet1 .innerSnippet .rightColumn .smallTitle {
+      .description-card-snippet .innerSnippet .rightColumn .smallTitle {
         font-size: 16px;
         font-family: 'Playfair Display', serif;
         line-height: 12px;
         margin-bottom: 36px; }
-      #snippet1 .innerSnippet .rightColumn .divbar {
+      .description-card-snippet .innerSnippet .rightColumn .divbar {
         position: relative;
         width: 81px;
         height: 1pt;
         margin-bottom: 34px;
         background-color: #000; }
-      #snippet1 .innerSnippet .rightColumn .conceptBlock {
+      .description-card-snippet .innerSnippet .rightColumn .conceptBlock {
         width: 470px;
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
         letter-spacing: 0.4px;
         line-height: 19px;
         margin-bottom: 60px; }
-      #snippet1 .innerSnippet .rightColumn .goToArticle {
+      .description-card-snippet .innerSnippet .rightColumn .goToArticle {
         position: absolute;
         width: 320px;
         height: 12px;
@@ -129,19 +141,19 @@
         -ms-transition: transform 0.5s ease-in-out;
         -o-transition: transform 0.5s ease-in-out;
         transition: transform 0.5s ease-in-out; }
-        #snippet1 .innerSnippet .rightColumn .goToArticle:hover {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle:hover {
           -webkit-transform: translate(15px, 0);
           -moz-transform: translate(15px, 0);
           -ms-transform: translate(15px, 0);
           -o-transform: translate(15px, 0);
           transform: translate(15px, 0); }
-        #snippet1 .innerSnippet .rightColumn .goToArticle .text {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle .text {
           float: right;
           text-transform: uppercase;
           letter-spacing: 1.2px;
           font-family: 'Roboto', sans-serif;
           margin-right: 22px; }
-        #snippet1 .innerSnippet .rightColumn .goToArticle .arrowHome {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle .arrowHome {
           float: right;
           margin-top: 2.5px; }
 
@@ -157,93 +169,93 @@
     box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.15); }
 
 @media only screen and (max-width: 1440px) {
-  #snippet1 {
+  .description-card-snippet {
     width: 780px; }
-    #snippet1 .innerSnippet .leftColumn {
+    .description-card-snippet .innerSnippet .leftColumn {
       width: 17%; }
-    #snippet1 .innerSnippet .rightColumn {
+    .description-card-snippet .innerSnippet .rightColumn {
       width: 76%;
       padding: 18px 0px 0px 7%; }
-      #snippet1 .innerSnippet .rightColumn .conceptBlock {
+      .description-card-snippet .innerSnippet .rightColumn .conceptBlock {
         width: 90%; } }
 @media only screen and (max-width: 1199px) {
-  #snippet1 {
+  .description-card-snippet {
     width: 646px; }
-    #snippet1 .innerSnippet .rightColumn .conceptBlock {
+    .description-card-snippet .innerSnippet .rightColumn .conceptBlock {
       width: 90%; } }
 @media only screen and (max-width: 991px) {
-  #snippet1 {
+  .description-card-snippet {
     width: 520px;
     padding: 10% 6% 6% 6%; }
-    #snippet1 .innerSnippet .leftColumn {
+    .description-card-snippet .innerSnippet .leftColumn {
       width: 100%; }
-      #snippet1 .innerSnippet .leftColumn .iconContainer {
+      .description-card-snippet .innerSnippet .leftColumn .iconContainer {
         max-width: 80px; }
-    #snippet1 .innerSnippet .rightColumn {
+    .description-card-snippet .innerSnippet .rightColumn {
       width: 100%;
       height: auto;
       padding: 20px 0px 0px 0px; }
-      #snippet1 .innerSnippet .rightColumn .colorbar {
+      .description-card-snippet .innerSnippet .rightColumn .colorbar {
         margin-bottom: 18px; }
-      #snippet1 .innerSnippet .rightColumn .bigTitle {
+      .description-card-snippet .innerSnippet .rightColumn .bigTitle {
         font-size: 36px;
         line-height: 28px;
         margin-bottom: 14px; }
-      #snippet1 .innerSnippet .rightColumn .smallTitle {
+      .description-card-snippet .innerSnippet .rightColumn .smallTitle {
         font-size: 14px;
         line-height: 10px;
         margin-bottom: 28px; }
-      #snippet1 .innerSnippet .rightColumn .divbar {
+      .description-card-snippet .innerSnippet .rightColumn .divbar {
         margin-bottom: 26px; }
-      #snippet1 .innerSnippet .rightColumn .conceptBlock {
+      .description-card-snippet .innerSnippet .rightColumn .conceptBlock {
         margin-bottom: 55px;
         font-size: 14px;
         line-height: 17px; }
-      #snippet1 .innerSnippet .rightColumn .goToArticle {
+      .description-card-snippet .innerSnippet .rightColumn .goToArticle {
         height: 10px;
         line-height: 10px;
         font-size: 10px; }
-        #snippet1 .innerSnippet .rightColumn .goToArticle .arrowHome {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle .arrowHome {
           margin-top: 1px; } }
 @media only screen and (max-width: 767px) {
-  #snippet1 {
+  .description-card-snippet {
     width: 100%; }
-    #snippet1 .innerSnippet .leftColumn .iconContainer {
+    .description-card-snippet .innerSnippet .leftColumn .iconContainer {
       max-width: 60px; }
-    #snippet1 .innerSnippet .rightColumn {
+    .description-card-snippet .innerSnippet .rightColumn {
       padding-top: 10px; }
-      #snippet1 .innerSnippet .rightColumn .colorbar {
+      .description-card-snippet .innerSnippet .rightColumn .colorbar {
         width: 60px;
         height: 3px;
         margin-bottom: 14px; }
-      #snippet1 .innerSnippet .rightColumn .bigTitle {
+      .description-card-snippet .innerSnippet .rightColumn .bigTitle {
         font-size: 28px;
         line-height: 22px;
         margin-bottom: 10px; }
-      #snippet1 .innerSnippet .rightColumn .smallTitle {
+      .description-card-snippet .innerSnippet .rightColumn .smallTitle {
         font-size: 12px;
         line-height: 9px;
         margin-bottom: 20px; }
-      #snippet1 .innerSnippet .rightColumn .divbar {
+      .description-card-snippet .innerSnippet .rightColumn .divbar {
         margin-bottom: 20px; }
-      #snippet1 .innerSnippet .rightColumn .conceptBlock {
+      .description-card-snippet .innerSnippet .rightColumn .conceptBlock {
         margin-bottom: 65px;
         font-size: 12px;
         line-height: 15px; }
-      #snippet1 .innerSnippet .rightColumn .goToArticle {
+      .description-card-snippet .innerSnippet .rightColumn .goToArticle {
         width: 100%;
         height: 10px;
         bottom: 15px; }
-        #snippet1 .innerSnippet .rightColumn .goToArticle:hover {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle:hover {
           -webkit-transform: translate(5px, 0);
           -moz-transform: translate(5px, 0);
           -ms-transform: translate(5px, 0);
           -o-transform: translate(5px, 0);
           transform: translate(5px, 0); }
-        #snippet1 .innerSnippet .rightColumn .goToArticle .arrowHome {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle .arrowHome {
           margin-top: 1px;
           margin-bottom: 15px; }
-        #snippet1 .innerSnippet .rightColumn .goToArticle .text {
+        .description-card-snippet .innerSnippet .rightColumn .goToArticle .text {
           margin-right: 10px; } }
 
 /*# sourceMappingURL=styling.css.map */

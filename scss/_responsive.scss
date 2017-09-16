@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1440px){
 
-	#snippet1{
+	.description-card-snippet{
 		width: 780px;
 
 		.innerSnippet{
@@ -22,7 +22,7 @@
 
 
 @media only screen and (max-width: 1199px){
-	#snippet1{
+	.description-card-snippet{
 		width: 646px;
 
 		.innerSnippet{
@@ -37,7 +37,7 @@
 
 
 @media only screen and (max-width: 991px){
-	#snippet1{
+	.description-card-snippet{
 		width: 520px;
 		padding: 10% 6% 6% 6%;
 
@@ -98,7 +98,7 @@
 
 // Phones
 @media only screen and (max-width: 767px){
-	#snippet1{
+	.description-card-snippet{
 		width: 100%;
 
 		.innerSnippet{

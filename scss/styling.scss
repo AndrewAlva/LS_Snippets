@@ -54,7 +54,22 @@
 	}
 
 	////////// Snippets
-	#snippet1{
+	.divisionTitles{
+		width: 100%;
+		font-family: 'Roboto', sans-serif;
+		padding-bottom: 22px;
+		border-bottom: 2px solid #000;
+
+		h5{
+			font-size: 16px;
+			letter-spacing: 0.1em;
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+		}
+	}
+
+	.description-card-snippet{
 		width: 900px;
 		overflow: hidden;
 		background-color: #fff;
