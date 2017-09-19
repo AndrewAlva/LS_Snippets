@@ -49,3 +49,9 @@
 	-moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.15);
 	box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.15);
 }
+
+@mixin drawSmallShadow(){
+	-webkit-box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.15);
+	box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.15);
+}
