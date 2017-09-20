@@ -8,14 +8,17 @@
 	.innerSnippet{
 		width: 100%;
 		height: 100%;
+		display: table;
 
 		h4,h5,p{
 			margin: 0;
 		}
 
 		.innerColumns{
-			@include displayLeft();
+			position: relative;
 			width: 50%;
+			display: table-cell;
+			vertical-align: top;
 		}
 
 		.leftColumn{
@@ -32,10 +35,15 @@
 			.imageContainerBG{
 				position: relative;
 				width: 100%;
-				height: 100px;
+				height: 100%;
 				background: url(http://placehold.it/715x550);
+			    -webkit-background-size: cover;
+			    -moz-background-size: cover;
+			    -ms-background-size: cover;
+			    -o-background-size: cover;
 			    background-size: cover;
 			    background-repeat: no-repeat;
+			    background-position: center center;
 			}
 		}
 
@@ -100,37 +108,6 @@
 	}
 }
 
-#container2{
-	float: left;
-	clear: left;
-	width: 100%;
-	overflow: hidden;
-	background-color: aqua;
-}
-
-#container1 {
-    float:left;
-    width:100%;
-    right: 50px;
-    background:green;
-    position:relative;
-}
-#col1 {
-    float:left;
-    width:46%;
-    position:relative;
-    left:52%;
-    overflow:hidden;
-}
-#col2 {
-    float:left;
-    width:46%;
-    position:relative;
-    left:56%;
-    overflow:hidden;
-}
-
-
 // Responsive
 @media only screen and (max-width: 1440px){
 	.fullwidth-info-pictured{
@@ -158,7 +135,6 @@
 		width: 780px;
 
 		.innerSnippet{
-
 			.rightColumn{
 				padding: 50px 25px 42px 20px;
 
@@ -206,7 +182,15 @@
 
 		.innerSnippet{
 			.innerColumns{
+				display: inline-block;
+				float: left;
 				width: 100%;
+			}
+
+			.leftColumn{
+				.imageContainerBG{
+					min-height: 250px;
+				}
 			}
 		}
 	}
