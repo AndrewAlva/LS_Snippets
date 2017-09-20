@@ -1,0 +1,15 @@
+.card-hover{
+	@include transitions(box-shadow, 0.4s, ease-in-out);
+
+	&:hover{
+		@include drawShadow();
+	}
+}
+
+.small-card-hover{
+	@include transitions(box-shadow, 0.4s, ease-in-out);
+
+	&:hover{
+		@include drawSmallShadow();
+	}
+}
