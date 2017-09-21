@@ -1,0 +1,33 @@
+// Init Carousel Full width for testimonials
+.fullwidth-carousel{
+	background-color: #fff;
+	width: 100%;
+	max-width: 1430px;
+	max-height: 550px;
+	overflow: hidden;
+}
+
+// Responsive
+@media only screen and (max-width: 1440px){
+	.fullwidth-carousel{
+		width: 1170px;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+	.fullwidth-carousel{
+		width: 970px;
+	}
+}
+
+@media only screen and (max-width: 991px){
+	.fullwidth-carousel{
+		width: 780px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.fullwidth-carousel{
+		width: 100%;
+	}
+}
