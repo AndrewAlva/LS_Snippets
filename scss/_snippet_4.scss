@@ -1,10 +1,108 @@
 // Init Carousel Full width for testimonials
 .fullwidth-carousel{
-	background-color: #fff;
+	position: relative;
 	width: 100%;
-	max-width: 1430px;
-	max-height: 550px;
-	overflow: hidden;
+	background-color: #fff;
+	
+	.innerSnippet{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		padding-top: 76px;
+		padding-bottom: 70px;
+		@include boxSizer();
+		text-align: center;
+
+		.centeredInfo{
+			position: relative;
+			// overflow: hidden;
+			width: 560px;
+			margin: 0 auto;
+
+			.cardTitle{
+				position: relative;
+				text-transform: uppercase;
+				font-family: 'Roboto', sans-serif;
+				font-size: 18px;
+				letter-spacing: 0.11em;
+				margin-bottom: 26px;
+			}
+
+			.divBar{
+				position: relative;
+				width: 81px;
+				height: 1px;
+				background-color: #000;
+				margin: 0 auto;
+			}
+
+			.forTitles{
+				margin-bottom: 82px;
+			}
+
+			.forBlocks{
+				margin-bottom: 30px;
+			}
+
+			.carouselContainer{
+				position: relative;
+				width: 100%;
+				height: 550px;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				.mbrtSlide{
+					position: absolute;
+					@include transitions(transform, 0.8s, ease-in-out);
+
+					.picContainer{
+						position: relative;
+						width: 320px;
+						height: 320px;
+						margin: 0 auto;
+						border-radius: 50%;
+						overflow: hidden;
+						margin-bottom: 47px;
+
+						img{
+							width: 100%;
+						}
+					}
+
+					.testimonial{
+						position: relative;
+						@include lightFont();
+						font-family: 'Playfair Display', serif;
+						font-size: 20px;
+						line-height: 23px;
+						margin-bottom: 26px;
+					}
+
+					.tName{
+						font-family: 'Roboto', sans-serif;
+						font-size: 25px;
+					}
+
+					.tInfo{
+						font-family: 'Roboto', sans-serif;
+
+						div{
+							display: inline-block;
+							font-size: 15px;
+							letter-spacing: 0.05em;
+						}
+
+						a{
+							text-decoration: none;
+							color: #6cbfff;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Responsive

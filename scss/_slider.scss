@@ -1,0 +1,12 @@
+// Slider animation classes
+.slideNext{
+	@include translate(100%, 0);
+}
+
+.slidePrev{
+	@include translate(-100%, 0);
+}
+
+.slideActive{
+	@include translate(0, 0);
+}

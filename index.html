@@ -49,12 +49,94 @@
 
         <div id="mbrtWrap">
             <div class="innerWrap">
+                <!-- Home Third Part -->
+                <h1>Snippet 4 | Testimonials Carousel</h1>
+                <section id="snippet4" class="fullwidth-carousel card-hover">
+                    <div class="innerSnippet">
+                        <div class="centeredInfo">
+                            <div class="cardTitle">
+                                Testimonios
+                            </div>
+                            <div class="divBar forTitles"></div>
+
+                            <ul class="carouselContainer">
+                                <li id="slide-0" class="mbrtSlide">
+                                    <div class="picContainer">
+                                        <img src="http://placehold.it/320x320" alt="Testimonial Photo">
+                                    </div>
+                                    <div class="testimonial">
+                                        “Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat”
+                                    </div>
+                                    <div class="divBar forBlocks"></div>
+                                    <div class="tName">
+                                        Testimonio 1
+                                    </div>
+                                    <div class="tInfo">
+                                        <div class="tCharge">Founder,</div>
+                                        <div class="tURL">
+                                            <a href="http://wecreate.me">wecreate.me</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li id="slide-1" class="mbrtSlide">
+                                    <div class="picContainer">
+                                        <img src="http://placehold.it/320x320" alt="Testimonial Photo">
+                                    </div>
+                                    <div class="testimonial">
+                                        “Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat”
+                                    </div>
+                                    <div class="divBar forBlocks"></div>
+                                    <div class="tName">
+                                        Testimonio 2
+                                    </div>
+                                    <div class="tInfo">
+                                        <div class="tCharge">Founder,</div>
+                                        <div class="tURL">
+                                            <a href="http://wecreate.me">wecreate.me</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li id="slide-2" class="mbrtSlide">
+                                    <div class="picContainer">
+                                        <img src="http://placehold.it/320x320" alt="Testimonial Photo">
+                                    </div>
+                                    <div class="testimonial">
+                                        “Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat”
+                                    </div>
+                                    <div class="divBar forBlocks"></div>
+                                    <div class="tName">
+                                        Testimonio 3
+                                    </div>
+                                    <div class="tInfo">
+                                        <div class="tCharge">Founder,</div>
+                                        <div class="tURL">
+                                            <a href="http://wecreate.me">wecreate.me</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+
+                            
+                            <a href="#" class="to-slide" data-slide="prev">A</a>
+                            <a href="#" class="to-slide" data-slide="next">S</a>
+                        </div>
+                    </div>
+                </section>
+
+
 
                 <!-- Home Second Part -->
                 <h1>Snippet 1 | Division & Title</h1>
-                <section id="snippet2" class="divisionTitles">
+                <section id="snippet1" class="divisionTitles">
                     <h5>Who We Are</h5>
                 </section>
+
 
                 <h1>Snippet 3 | fullwidth-info-pictured</h1>
                 <section id="snippet3-B" class="fullwidth-info-pictured card-hover">
@@ -88,7 +170,6 @@
                     </div>
                 </section>
 
-                
                 <section id="snippet3-A" class="fullwidth-info-pictured card-hover">
                     <div class="innerSnippet">
                         <div class="innerColumns leftColumn">
@@ -122,11 +203,6 @@
 
 
                 <!-- Home First Part -->
-                <h1>Snippet 1 | Division & Title</h1>
-                <section id="division1" class="divisionTitles">
-                    <h5>What We Do</h5>
-                </section>
-                
                 <h1>Snippet 2 | description-card-snippet</h1>
                 <section id="snippet2-A" class="description-card-snippet card-hover">
                     <div class="innerSnippet">
@@ -213,6 +289,70 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <!-- Slider Script -->
+        <script>
+            $(document).ready(function() {
+                $('.to-slide').on("click", function(event){
+                    event.preventDefault();
+                    var slide = $(this).data("slide");
+                    if(slide=="next" || slide=="prev"){
+                        if(slide=="prev") Slider.prev();
+                        else Slider.next();
+                    }else{
+                        Slider.goTo(slide);
+                    }
+                });
+                Slider.init();
+            });
+
+            var Slider = {
+                canScroll: true,
+                items: [],
+                slideActive: 0,
+                duration: 600,
+                init: function(){
+                    Slider.items = $('.mbrtSlide');
+                    var state = window.location.search ? window.location.search : 0; 
+                    Slider.goTo(state);
+                },
+                prev: function(){
+                    var index = Slider.slideActive-1;
+                    console.log("index",index);
+                    if(index<0){
+                        Slider.goTo(Slider.items.length-1);
+                    }else{
+                        Slider.goTo(index);
+                    }
+                },
+                next: function(){
+                    var index = Slider.slideActive+1;
+                    console.log("index",index);
+                    if(index>=Slider.items.length){
+                        Slider.goTo(0);
+                    }else{
+                        Slider.goTo(index);
+                    }
+                },
+                goTo: function(index){
+                    if(Slider.canScroll){
+                        Slider.canScroll = false;
+                        $('.mbrtSlide').not("#slide-"+index).fadeOut();
+                        $("#slide-"+index).fadeIn(Slider.duration, function(){
+                            Slider.canScroll = true;
+                            Slider.setStates(index);
+                        });
+                    }
+                },
+                setStates: function(index){
+                    Slider.slideActive = index;
+                    $('.mbrtSlide').removeClass('slideNext slidePrev slideActive');
+                    $("#slide-"+index).addClass('slideActive');
+                    $("#slide-"+(index-1)).addClass('slidePrev');
+                    $("#slide-"+(index+1)).addClass('slideNext');
+                }
+            }
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
